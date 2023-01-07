@@ -201,14 +201,21 @@ img {
   background-color: var(--accent-cornflover);
   border: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
+
+  transition: border-color var(--duration) var(--timing-function),
+    background-color var(--duration) var(--timing-function);
 }
 
-.close-btn:active {
-  border-color: #404bbf;
-  background: #404bbf;
+.close-btn:active,
+.close-btn:hover,
+.close-btn:focus {
+  border-color: var(--primary-button-hover);
+  background-color: var(--primary-button-hover);
 }
 
-.close-btn:active .close-btn-icon {
+.close-btn:active .close-btn-icon,
+.close-btn:hover .close-btn-icon,
+.close-btn:focus .close-btn-icon {
   fill: var(--color-white);
 }
 
